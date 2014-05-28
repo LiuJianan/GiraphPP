@@ -181,7 +181,7 @@ implements Tool {
 			System.exit(-1);
 		}
 		GiraphJob job = new GiraphJob(getConf(), "CoarsenVertex");
-		job.getConfiguration().setInt(GiraphJob.CHECKPOINT_FREQUENCY, 10);
+		job.getConfiguration().setInt(GiraphJob.CHECKPOINT_FREQUENCY, 0);
 		job.setVertexClass(CoarsenVertex.class);
 		job.setWorkerContextClass(CoarsenWorkerContext.class);
 		job.setVertexInputFormatClass(SimpleLongCoarsenVertexValueLongMVertexBinaryInputFormat.class);
